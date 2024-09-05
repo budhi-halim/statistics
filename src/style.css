@@ -1,0 +1,84 @@
+/* FONT */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+/* RESET */
+* {
+    -webkit-tap-highlight-color: transparent;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+
+/* STYLING */
+body {
+    background-color: #E0F7FA;
+    color: #283593;
+    font-family: "Nunito", sans-serif;
+    font-size: 1.25rem;
+}
+
+h1 {
+    background-color: #C4E0F3;
+    box-shadow: 0 1px 5px black;
+    padding: 0.5em;
+    text-align: center;
+}
+
+a {
+    color: #FF7043;
+    text-decoration: none;
+}
+
+.button {
+    border-radius: 0.5em;
+    box-shadow: 1px 1px 3px black;
+    cursor: pointer;
+}
+
+.os-selection {
+    align-items: center;
+    display: grid;
+    font-size: 2em;
+    grid-template-rows: 1fr 1fr;
+    left: 50%;
+    position: fixed;
+    row-gap: 1ch;
+    text-align: center;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.os-selection-menu {
+    column-gap: 1ch;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    list-style-type: none;
+}
+
+.os-selection-button {
+    background-color: #C4E0F3;
+    width: 10ch;
+}
+
+.os-selection-button:hover {
+    filter: brightness(95%);
+}
+
+.os-selection-button:active {
+    box-shadow: 1px 0 3px black;
+    transform: translateY(1px);
+}
+
+.selected-os {
+    margin: 2vw;
+}
+
+ol {
+    list-style-position: inside;
+}
+
+.download-button{
+    background-color: #FAF3F1;
+    padding: 0 1ch;
+}
