@@ -59,19 +59,24 @@ a {
 .os-selection-button {
     background-color: #C4E0F3;
     width: 10ch;
+    justify-self: center;
 }
 
-.os-selection-button:hover {
+.button:hover {
     filter: brightness(95%);
 }
 
-.os-selection-button:active {
+.button:active {
     box-shadow: 1px 0 3px black;
     transform: translateY(1px);
 }
 
 .selected-os {
     margin: 2vw;
+}
+
+.alert {
+    font-size: 0.75em;
 }
 
 ol {
@@ -81,4 +86,16 @@ ol {
 .download-button{
     background-color: #FAF3F1;
     padding: 0 1ch;
+}
+
+/* MEDIA QUERIES */
+@media (max-aspect-ratio: 4/5) {
+    body {
+        font-size: 0.75rem;
+    }
+    .os-selection-menu {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        row-gap: 1ch;
+    }
 }
