@@ -1,6 +1,13 @@
 // Variables
 let userOS = null;
 
+// Prepare Elements for Animation
+const sectionElements = document.querySelectorAll('section');
+
+for (let i = 0; i < sectionElements.length; i++) {
+    sectionElements[i].classList.add('hidden');
+};
+
 // Logic
 getOS();
 
@@ -17,14 +24,11 @@ if (userOS == 'Windows' || userOS == 'MacOS') {
     // Prepare Elements for Animation
     const classOS = userOS.toLowerCase();
 
-    const elementList = [document.querySelector(`#${classOS} h2`), ...document.querySelectorAll(`#${classOS} ol li`)];
-    const downloadButton = document.querySelector(`#${classOS} a`);
+    const elementList = [document.querySelector(`#${classOS} h2`), ...document.querySelectorAll(`#${classOS} ol li`), document.querySelector(`#${classOS} a`)];
     
     for (let i = 0; i < elementList.length; i++) {
         elementList[i].classList.add('hidden');
     };
-
-    downloadButton.classList.add('hidden');
     // Animation
     function time(time) {
         return new Promise(function(resolve, reject) {
@@ -52,8 +56,6 @@ if (userOS == 'Windows' || userOS == 'MacOS') {
                 await time(50);
             };
         } finally {
-            downloadButton.classList.remove('hidden');
-            downloadButton.classList.add('download-button-appear');
         };
     };
 
