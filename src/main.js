@@ -14,7 +14,18 @@ if (userOS == null) {
 
 if (userOS == 'Windows' || userOS == 'MacOS') {
     document.getElementById('os-detection').innerText = `SPSS for ${userOS}`;
+    // Prepare Elements for Animation
+    const classOS = userOS.toLowerCase();
+
+    const elementList = [document.querySelector(`#${classOS} h2`), ...document.querySelectorAll(`#${classOS} ol li`)];
+    const downloadButton = document.querySelector(`#${classOS} a`);
     
+    for (let i = 0; i < elementList.length; i++) {
+        elementList[i].classList.add('hidden');
+    };
+
+    downloadButton.classList.add('hidden');
+    // Animation
     function time(time) {
         return new Promise(function(resolve, reject) {
             setTimeout(resolve, time);
@@ -33,9 +44,16 @@ if (userOS == 'Windows' || userOS == 'MacOS') {
 
             await time(500);
             addClass('os-detection', 'hidden');
+            removeClass(classOS, 'hidden')
+
+            for (let i = 0; i < elementList.length; i++) {
+                elementList[i].classList.remove('hidden');
+                elementList[i].classList.add('selected-os-appear');
+                await time(50);
+            };
         } finally {
-            addClass(userOS.toLowerCase(), 'selected-os-appear')
-            removeClass(userOS.toLowerCase(), 'hidden')
+            downloadButton.classList.remove('hidden');
+            downloadButton.classList.add('download-button-appear');
         };
     };
 

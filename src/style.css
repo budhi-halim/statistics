@@ -102,7 +102,11 @@ ol {
 }
 
 .selected-os-appear {
-    animation: instruction-appear 0.5s ease;
+    animation: instruction-appear 0.25s ease-in-out;
+}
+
+.download-button-appear {
+    animation: download-button-appear 0.25s ease-in-out;
 }
 
 .hidden {
@@ -144,10 +148,19 @@ ol {
 @keyframes instruction-appear {
     0% {
         color: transparent;
-        transform: translateY(20%);
+        transform: translateY(100%);
     }
     100% {
         color: var(--FONT-COLOR);
         transform: translateY(0%);
+    }
+}
+
+@keyframes download-button-appear {
+    0% {
+        opacity: 0%;
+    }
+    100% {
+        opacity: 100%;
     }
 }
