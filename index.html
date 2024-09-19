@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./src/spss-icon.png" type="image/png">
     <link rel="stylesheet" href="./src/style.css">
-    <script type="module" src="./src/index.js" defer></script>
+    <script type="module" src="./src/main.js"></script>
     <title>SPSS</title>
 </head>
 <body>
@@ -13,40 +14,36 @@
         <br>
         (SPSS)
     </h1>
-    <section id="os-selection" class="os-selection">
-        Choose your OS
-        <menu class="os-selection-menu">
-            <li id="windows-selected" class="os-selection-button button">Windows</li>
-            <li id="mac-os-selected" class="os-selection-button button">MacOS</li>
-        </menu>
-        <br>
-        <p id="user-os" class="alert">Detected OS:</p>
-        <p id="incompatible" class="alert" hidden>SPSS Program is not available for detected OS.</p>
-    </section>
-    <section id="os-detection" class="os-detection">
-    </section>
-    <section id="windows" class="selected-os" hidden>
-        <h2>Instruction</h2>
-        <ol>
-            <li>Press the download button below.</li>
-            <li>Right-click on the downloaded file, then choose 'extract'.</li>
-            <li>Open the 'SPSS' folder, then right-click 'SPSS_Statistics_25_win64.exe' program and choose run as administrator.</li>
-            <li>Perform the installation, but <strong>do not</strong> run the software after installation (you might need to uncheck the 'start program' checkbox) and close the installer.</li>
-            <li>Navigate to 'SPSS' > 'Crack' and copy the 'Iservrc' file.</li>
-            <li>Navigate to 'This PC' > 'OS (C:)' (may differ on different computers) > 'Program Files' > 'IBM' > 'SPSS' > 'Statistics' > '25' and paste the copied file. Choose 'replace file' option.</li>
-            <li>Run the SPSS Program.</li>
-        </ol>
-        <br>
-        <a id="spss-windows" class="download-button button" href="https://drive.google.com/uc?export=download&id=1--1oPuUbeaGnTgogCoXYh4R4_gJmYLBQ">Download</a>
-    </section>
-    <section id="mac-os" class="selected-os" hidden>
-        <h2>Instruction</h2>
-        <ol>
-            <li>Press the download button below.</li>
-            <li>Watch the installation guide for <a href="https://drive.google.com/uc?export=download&id=1ollCsHP0IF8OrZ67n72oXrFTvnQ_XjII"><em>placeholder 1</em></a> or <a href="https://drive.google.com/uc?export=download&id=1Vk8Rj9zR60O7mStM_BVs5uXYIvCWg6Vo"><em>placeholder 2</em></a>.</li>
-        </ol>
-        <br>
-        <a id="spss-mac-os" class="download-button button" href="https://drive.google.com/uc?export=download&id=16qBAJr9gPPVP7ILEYhmXZekLEhASV3lh">Download</a>
-    </section>
+    <article id="content" class="content">
+        <!-- OS Detection -->
+        <section id="os-detection" class="os-detection hidden">
+            <!-- JavaScript -->
+        </section>
+        <!-- Windows -->
+        <section id="windows" class="selected-os hidden">
+            <h2>Instruction</h2>
+            <ol>
+                <li>Press the download button below.</li>
+                <li>Right-click on the downloaded file, then choose 'extract'.</li>
+                <li>Open the 'SPSS' folder, then right-click 'SPSS_Statistics_25_win64.exe' program and choose run as administrator.</li>
+                <li>Perform the installation, but <strong>do not</strong> run the software after installation (you might need to uncheck the 'start program' checkbox) and close the installer.</li>
+                <li>Navigate to 'SPSS' > 'Crack' and copy the 'Iservrc' file.</li>
+                <li>Navigate to 'This PC' > 'OS (C:)' (may differ on different computers) > 'Program Files' > 'IBM' > 'SPSS' > 'Statistics' > '25' and paste the copied file. Choose 'replace file' option.</li>
+                <li>Run the SPSS Program.</li>
+            </ol>
+            <br>
+            <a id="spss-windows" class="button" href="https://drive.google.com/uc?export=download&id=1--1oPuUbeaGnTgogCoXYh4R4_gJmYLBQ">Download</a>
+        </section>
+        <!-- MacOS -->
+        <section id="macos" class="selected-os hidden">
+            <h2>Instruction</h2>
+            <ol>
+                <li>Press the download button below.</li>
+                <li>Watch the installation guide for <a href="https://drive.google.com/uc?export=download&id=1ollCsHP0IF8OrZ67n72oXrFTvnQ_XjII"><em>placeholder 1</em></a> or <a href="https://drive.google.com/uc?export=download&id=1Vk8Rj9zR60O7mStM_BVs5uXYIvCWg6Vo"><em>placeholder 2</em></a>.</li>
+            </ol>
+            <br>
+            <a id="spss-macos" class="button" href="https://drive.google.com/uc?export=download&id=16qBAJr9gPPVP7ILEYhmXZekLEhASV3lh">Download</a>
+        </section>
+    </article>
 </body>
 </html>
